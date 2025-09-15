@@ -5,6 +5,7 @@ from wordcloud import WordCloud
 from textblob import TextBlob
 import matplotlib.pyplot as plt
 import io
+st.title("Visualisation of word cloud and sentiment analysis")
 file = st.file_uploader("Upload your file",type = ["docx","pdf"])
 if file is not None:
     file_name = file.name
@@ -48,3 +49,4 @@ if file is not None:
             plt.pie([pos, neut, neg], labels=["Positive", "Neutral", "Negative"], autopct='%1.1f%%', colors=["green", "gold", "red"])
             st.pyplot(plt, use_container_width=True)
             
+
